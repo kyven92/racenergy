@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4p$03#=2&gab0j76$41p1q1vtic6)+db$@+z6siu8rmwzw!868'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,13 +75,15 @@ WSGI_APPLICATION = 'racenery_IOT.wsgi.application'
 
 DB_SETTINGS = {
 
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'postgres',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'racpostgresql',
     'USER': 'racenergy',
     'PASSWORD': 'racenergy1234',
-    'HOST': 'racdatabase.cwbuj1wfhlra.ap-south-1.rds.amazonaws.com',
-
+    'HOST': 'racpostgresql.cwbuj1wfhlra.ap-south-1.rds.amazonaws.com',
+    'PORT':'',
 }
+
+DATABASES = {'default': DB_SETTINGS}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
