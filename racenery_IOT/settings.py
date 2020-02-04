@@ -74,13 +74,14 @@ WSGI_APPLICATION = 'racenery_IOT.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DB_SETTINGS = {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'racdb',
-        'USER': 'racenergy',
-        'PASSWORD': 'racenergy1234',
-        'HOST': 'racdb.cwbuj1wfhlra.ap-south-1.rds.amazonaws.com',
-        'PORT': '5432',
-    }
+
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'postgres',
+    'USER': 'racenergy',
+    'PASSWORD': 'racenergy1234',
+    'HOST': 'racdatabase.cwbuj1wfhlra.ap-south-1.rds.amazonaws.com',
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
