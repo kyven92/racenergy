@@ -40,12 +40,12 @@ class uploadRPSData(APIView):
     permission_classes = (IsAuthenticated,)
 
     def post(self,request):
-        print("Request Body: ", request.data)
-        print("Request Authorization: ", request.headers['Authorization'])
+        # print("Request Body: ", request.data)
+        # print("Request Authorization: ", request.headers['Authorization'])
         auth_token = request.headers['Authorization'].rstrip().split()[1]
-        print("Response Token: ",request.headers['Authorization'].rstrip().split()[1])
+        # print("Response Token: ",request.headers['Authorization'].rstrip().split()[1])
         user_id_t=Token.objects.values_list('user_id',flat=True).get(key=auth_token)
-        print("User ID: ",user_id_t)
+        # print("User ID: ",user_id_t)
 
         for json_obj in request.data:
 
@@ -106,7 +106,7 @@ class no_of_students(LoginRequiredMixin,APIView):
         data['years']=years
         data['no_of_students']=no_of_students
 
-        print("### Data; ",data)
+        # print("### Data; ",data)
 
 
         return Response(data)
@@ -134,7 +134,7 @@ class genderPercentage(LoginRequiredMixin,APIView):
         data['gender_weights']=gender_weights
 
 
-        print("### Data; ",data)
+        # print("### Data; ",data)
         return Response(data)
 
 
