@@ -82,10 +82,10 @@ class HomePageView(LoginRequiredMixin,View):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            print("#############: Authenticated")
+            # print("#############: Authenticated")
             return render(request, 'charts.html')
         else:
-            print("#############: Redirecting")
+            # print("#############: Redirecting")
             return HttpResponseRedirect('/login.html')
 
 
@@ -162,5 +162,5 @@ class genderAilments(APIView):
         data['female_ailments']=female_ailments
 
 
-        print("### Data; ",data)
+        # print("### Data; ",data)
         return Response(data)
