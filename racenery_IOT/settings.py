@@ -35,6 +35,9 @@ ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'racIOT.User'
 
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'accounts/logout/'
+
+
 
 # Application definition
 
